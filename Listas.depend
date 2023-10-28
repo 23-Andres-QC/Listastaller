@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1698123514 source:d:\ciclo 03\algoritmo y estructura de datos\clases y practicas\talleres\listas\src\lista.cpp
+	"Lista.h"
+
+1698123938 d:\ciclo 03\algoritmo y estructura de datos\clases y practicas\talleres\listas\include\lista.h
+	<iostream>
+
+1698460554 source:d:\ciclo 03\algoritmo y estructura de datos\clases y practicas\talleres\listas\main.cpp
+	<iostream>
+	"Lista.h"
+
+1698459680 d:\ciclo 03\algoritmo y estructura de datos\clases y practicas\talleres\listas\lista.h
+	<iostream>
+
+1698459888 source:d:\ciclo 03\algoritmo y estructura de datos\clases y practicas\talleres\listas\lista.cpp
+	"Lista.h"
+
