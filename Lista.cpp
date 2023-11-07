@@ -4,12 +4,6 @@ Node::Node(int v)
     this->value = v;
     this->nxt = nullptr;
 }
-
-Node::~Node()
-{
-    //dtor
-}
-
 void List::add(int v){
     Node* p = new Node(v);
     if(this->head == nullptr)
@@ -74,27 +68,6 @@ void List::eliminar(int ix){
         }
     }
 }
-int List::verificarpalindromo(List*A){
-    Node *a=A->head;
-    List B;
-    List C;
-    while(a!=nullptr){
-        B.add_back(a->get_value());
-        C.add(a->get_value());
-        a=a->get_next();
-    }
-    Node * b=B.head;
-    Node * c=C.head;
-    while(b!=nullptr and c!=nullptr){
-      if(b->get_value()==c->get_value()){
-        return true;
-      }else{
-        return false;
-      };
-      b=b->get_next();
-      c=c->get_next();
-    }
-};
 void hacerlistainterseccion(List* A,List* B){
     Node* a=A->head;
     List C;
@@ -132,5 +105,61 @@ void List::eliminarvalor(int valor) {
         bef=p;
         p=p->get_next();
     }
+}
+Node::~Node() {
+}
+
+NodeLetras::NodeLetras(char v){
+    this->valor=v;
+    this->nxt=nullptr;
+}
+void ListLetras::addletra(char v){
+    NodeLetras* p = new NodeLetras(v);
+    if(this->head == nullptr)
+        this->head = p;
+    else{
+        p->set_next(this->head);
+        this->head = p;
+    }
+}
+void ListLetras::add_backletras(char v){
+    NodeLetras* p = new NodeLetras(v);
+    if(this->head == nullptr)
+        this->head = p;
+    else{
+        NodeLetras* q = this->head;
+        while(q->get_next()!= nullptr){
+            q = q->get_next();
+            }
+        q->set_next(p);
+    }
+}
+void ListLetras::showletras(){
+   NodeLetras* q = this->head;
+   while (q!= nullptr){
+    q->show();
+    q = q->get_next();
+   }
+   cout<<endl;
+}
+int ListLetras::verificarpalindromo(ListLetras *A) {
+    NodeLetras *a = A->head;
+    ListLetras B;
+    ListLetras C;
+    while (a != nullptr) {
+        B.add_backletras(a->get_value());
+        C.addletra(a->get_value());
+        a = a->get_next();
+    }
+    NodeLetras *b = B.head;
+    NodeLetras *c = C.head;
+    while (b != nullptr && c != nullptr){
+        if (b->get_value() != c->get_value()) {
+            return false;
+        }
+        b = b->get_next();
+        c = c->get_next();
+    }
+    return true;
 }
 

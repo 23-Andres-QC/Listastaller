@@ -5,13 +5,14 @@
 1698123938 d:\ciclo 03\algoritmo y estructura de datos\clases y practicas\talleres\listas\include\lista.h
 	<iostream>
 
-1698460554 source:d:\ciclo 03\algoritmo y estructura de datos\clases y practicas\talleres\listas\main.cpp
+1698784196 source:d:\ciclo 03\algoritmo y estructura de datos\clases y practicas\talleres\listas\main.cpp
 	<iostream>
 	"Lista.h"
+	<vector>
 
-1698459680 d:\ciclo 03\algoritmo y estructura de datos\clases y practicas\talleres\listas\lista.h
+1698783374 d:\ciclo 03\algoritmo y estructura de datos\clases y practicas\talleres\listas\lista.h
 	<iostream>
 
-1698459888 source:d:\ciclo 03\algoritmo y estructura de datos\clases y practicas\talleres\listas\lista.cpp
+1698783743 source:d:\ciclo 03\algoritmo y estructura de datos\clases y practicas\talleres\listas\lista.cpp
 	"Lista.h"
 

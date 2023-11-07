@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Lista.h"
+#include <vector>
 using namespace std;
 
 int main()
@@ -19,47 +20,22 @@ int main()
     D->invertir(D);
     cout<<endl;
      D->show();
-    cout<<"================================="<<endl;
+    cout<<"====verificarpalindromo============================="<<endl;
     cout<<"Ejercicio02: Palindromo"<<endl;
-    List*A=new List();
-    A->add(1);
-    A->add(2);
-    A->add(3);
-    A->add(2);
-    A->add(1);
-    List*B=new List();
-    B->add(1);
-    B->add(2);
-    B->add(2);
-    B->add(1);
-    List *I=new List();
-    I->add(8);
-    I->add(9);
-    I->add(10);
-    I->add(8);
-    I->add(9);
+    ListLetras*A=new ListLetras();
+    string palabra;
+    cout<<"Ingresa la palabra palindroma: "<<endl;
+    cin>>palabra;
+    for(int i=0; i<palabra.size();i++){
+        A->addletra(palabra[i]);
+    }
+    A->showletras();
+    cout<<endl;
     if(A->verificarpalindromo(A)==true){
-        A->show();
+        A->showletras();
         cout<<endl;
         cout<<"La lista es palindroma "<<endl;
     }else{
-        cout<<"La lista no es palindroma "<<endl;
-    }
-    cout<<"================================="<<endl;
-    if(B->verificarpalindromo(B)==true){
-        B->show();
-        cout<<endl;
-        cout<<"La lista es palindroma "<<endl;
-    }else{
-        cout<<"La lista no es palindroma "<<endl;
-    }
-    cout<<"================================="<<endl;
-    if(I->verificarpalindromo(I)==true){
-        I->show();
-        cout<<endl;
-        cout<<"La lista es palindroma "<<endl;
-    }else{
-        I->show();
         cout<<"La lista no es palindroma "<<endl;
     }
 
